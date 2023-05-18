@@ -20,12 +20,12 @@ def test_experience():
     Check that it returns the new experience in that list
     '''
     example_experience = {
+        "title": "Software Developer",
         "company": "A Cooler Company",
-        "description": "Writing JavaScript Code",
-        "end_date": "Present",
-        "logo": "example-logo.png",
         "start_date": "October 2022",
-        "title": "Software Developer"
+        "end_date": "Present",
+        "description": "Writing JavaScript Code",
+        "logo": "example-logo.png"
     }
 
     item_id = app.test_client().post('/resume/experience',
@@ -46,7 +46,7 @@ def test_education():
         "start_date": "October 2022",
         "end_date": "August 2024",
         "grade": "86%",
-        "logo": "example-logo.png",
+        "logo": "example-logo.png"
     }
     item_id = app.test_client().post('/resume/education',
                                      json=example_education).json['id']
